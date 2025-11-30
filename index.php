@@ -74,6 +74,15 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 .feature-card h3 { font-size:1.5rem; margin-bottom:1rem; color:var(--dark); }
 .feature-card p { color:var(--gray); line-height:1.7; }
 
+/* Contact */
+.contact { padding:80px 2rem; background:var(--white); }
+.contact-container { max-width:600px; margin:0 auto; }
+.form-group { margin-bottom:1.5rem; }
+.form-group label { display:block; margin-bottom:0.5rem; font-weight:600; color:var(--dark); }
+.form-group input, .form-group textarea { width:100%; padding:1rem; border:2px solid var(--light-gray); border-radius:8px; font-size:1rem; font-family:inherit; transition:all 0.3s; }
+.form-group input:focus, .form-group textarea:focus { outline:none; border-color:var(--primary); box-shadow:0 0 10px rgba(255,107,107,0.3); }
+.form-group textarea { resize:vertical; min-height:150px; }
+.error-messages { color:red; margin-bottom:1rem; }
 
 </style>
 </head>
