@@ -51,6 +51,16 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 .btn-secondary:hover { background:var(--primary); color:var(--white); }
 .mobile-menu-btn { display:none; font-size:1.5rem; background:none; border:none; color:var(--dark); cursor:pointer; }
 
+/* Hero */
+.hero {
+    padding:120px 2rem 80px;
+    background: linear-gradient(270deg, #FF6B6B, #4ECDC4, #FFD93D);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+    color:var(--white);
+    text-align:center;
+    margin-top:70px;
+}
 </style>
 </head>
 <body>
@@ -74,7 +84,7 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
     <h1>The Last POS System You'll Ever Need</h1>
     <p>Streamline your business operations with our powerful, easy-to-use point of sale system. Built for modern businesses.</p>
     <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Get Started for Free</a>
+        <a href="#contact" class="btn btn-primary">Get Started For Free</a>
         <a href="#features" class="btn btn-secondary">Learn More</a>
     </div>
     <div class="hero-image">
