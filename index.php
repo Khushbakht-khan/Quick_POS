@@ -68,6 +68,20 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
     <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
 </div>
 </nav>
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-container">
+    <h1>The Last POS System You'll Ever Need</h1>
+    <p>Streamline your business operations with our powerful, easy-to-use point of sale system. Built for modern businesses.</p>
+    <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Get Started for Free</a>
+        <a href="#features" class="btn btn-secondary">Learn More</a>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop" alt="QuickPOS Dashboard">
+    </div>
+</div>
+</section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
