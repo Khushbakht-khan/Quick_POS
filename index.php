@@ -137,6 +137,35 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 </div>
 </section>
 
+<footer>
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>QuickPOS</h3>
+            <p>The modern point of sale system built for businesses that want to grow.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Product</h3>
+            <p><a href="#features" style="color:var(--gray); text-decoration:none;">Features</a></p>
+            <p><a href="#pricing" style="color:var(--gray); text-decoration:none;">Pricing</a></p>
+        </div>
+        <div class="footer-section">
+            <h3>Company</h3>
+            <p><a href="#" style="color:var(--gray); text-decoration:none;">About Us</a></p>
+            <p><a href="#contact" style="color:var(--gray); text-decoration:none;">Contact</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 QuickPOS. All rights reserved.</p>
+    </div>
+</div>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
