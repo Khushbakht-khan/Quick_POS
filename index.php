@@ -136,7 +136,57 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
     </div>
 </div>
 </section>
-
+<!-- Pricing Section -->
+<section id="pricing" class="pricing">
+<div class="section-title" data-aos="fade-up">
+    <h2>Simple, Transparent Pricing</h2>
+    <p>Choose the plan that's right for your business</p>
+</div>
+<div class="pricing-grid">
+   
+    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Basic</h3>
+        <div class="price">$90<span>/mo</span></div>
+        <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Up to 1,000 transactions</li>
+            <li><i class="fas fa-check"></i> Basic inventory management</li>
+            <li><i class="fas fa-check"></i> Sales reports</li>
+            <li><i class="fas fa-check"></i> Email support</li>
+            <li><i class="fas fa-check"></i> 1 location</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary">Get Started</a>
+    </div>
+    <!-- Pro -->
+    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+        <div class="pricing-badge">Most Popular</div>
+        <h3>Pro</h3>
+        <div class="price">$79<span>/mo</span></div>
+        <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Unlimited transactions</li>
+            <li><i class="fas fa-check"></i> Advanced inventory</li>
+            <li><i class="fas fa-check"></i> Advanced analytics</li>
+            <li><i class="fas fa-check"></i> Priority support</li>
+            <li><i class="fas fa-check"></i> Up to 5 locations</li>
+            <li><i class="fas fa-check"></i> API access</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
+    <!-- Enterprise -->
+    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Enterprise</h3>
+        <div class="price">$199<span>/mo</span></div>
+        <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Everything in Pro</li>
+            <li><i class="fas fa-check"></i> Unlimited locations</li>
+            <li><i class="fas fa-check"></i> Custom integrations</li>
+            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+            <li><i class="fas fa-check"></i> 24/7 phone support</li>
+            <li><i class="fas fa-check"></i> Custom training</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary">Contact Sales</a>
+    </div>
+</div>
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
