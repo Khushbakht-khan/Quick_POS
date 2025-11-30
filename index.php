@@ -61,6 +61,20 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
     text-align:center;
     margin-top:70px;
 }
+
+/* Features */
+.features { padding:80px 2rem; background:var(--white); }
+.section-title { text-align:center; margin-bottom:3rem; }
+.section-title h2 { font-size:2.5rem; font-weight:800; margin-bottom:1rem; color:var(--dark); }
+.section-title p { font-size:1.1rem; color:var(--gray); max-width:600px; margin:0 auto; }
+.features-grid { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; }
+.feature-card { padding:2rem; background:var(--light-gray); border-radius:12px; transition:all 0.4s; text-align:center; opacity:0; }
+.feature-card:hover { transform:translateY(-10px) scale(1.03); box-shadow:0 20px 40px rgba(0,0,0,0.1); }
+.feature-icon { width:70px; height:70px; background:linear-gradient(135deg,var(--primary),var(--secondary)); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem; color:var(--white); }
+.feature-card h3 { font-size:1.5rem; margin-bottom:1rem; color:var(--dark); }
+.feature-card p { color:var(--gray); line-height:1.7; }
+
+
 </style>
 </head>
 <body>
