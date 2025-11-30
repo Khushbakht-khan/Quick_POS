@@ -137,6 +137,33 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 </div>
 </section>
 
+<!-- Pricing Section -->
+<section id="pricing" class="pricing">
+<div class="section-title" data-aos="fade-up">
+    <h2>Simple, Transparent Pricing</h2>
+    <p>Choose the plan that's right for your business</p>
+</div>
+<div class="pricing-grid">
+   
+    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Basic</h3>
+        
+        
+    </div>
+    <!-- Pro -->
+    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+        <div class="pricing-badge">Most Popular</div>
+        <h3>Pro</h3>
+        
+    </div>
+    <!-- Enterprise -->
+    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Enterprise</h3>
+        <div class="price">$199<span>/mo</span></div>
+        
+    </div>
+</div>
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
