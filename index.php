@@ -80,7 +80,17 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 .pricing-card { background:var(--white); border-radius:15px; padding:2.5rem; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.08); transition:all 0.3s; position:relative; opacity:0; }
 .pricing-card:hover { transform:translateY(-10px) scale(1.02); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
 .pricing-card.featured { border:3px solid var(--primary); animation:glow 2s ease-in-out infinite alternate; }
-
+@keyframes glow {
+    from { box-shadow:0 0 15px rgba(255,107,107,0.3); }
+    to { box-shadow:0 0 30px rgba(255,107,107,0.6); }
+}
+.pricing-badge { position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:var(--primary); color:var(--white); padding:0.5rem 1.5rem; border-radius:20px; font-size:0.875rem; font-weight:600; }
+.pricing-card h3 { font-size:1.75rem; margin-bottom:1rem; color:var(--dark); }
+.price { font-size:3rem; font-weight:800; color:var(--primary); margin:1rem 0; }
+.price span { font-size:1.25rem; color:var(--gray); }
+.pricing-features { list-style:none; margin:2rem 0; text-align:left; }
+.pricing-features li { padding:0.75rem 0; border-bottom:1px solid var(--light-gray); display:flex; align-items:center; gap:0.5rem; }
+.pricing-features i { color:var(--secondary); }
 </style>
 </head>
 <body>
@@ -142,7 +152,6 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
     </div>
 </div>
 </section>
-
 <!-- Pricing Section -->
 <section id="pricing" class="pricing">
 <div class="section-title" data-aos="fade-up">
@@ -153,20 +162,44 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
    
     <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
         <h3>Basic</h3>
-        
-        
+        <div class="price">$90<span>/mo</span></div>
+        <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Up to 1,000 transactions</li>
+            <li><i class="fas fa-check"></i> Basic inventory management</li>
+            <li><i class="fas fa-check"></i> Sales reports</li>
+            <li><i class="fas fa-check"></i> Email support</li>
+            <li><i class="fas fa-check"></i> 1 location</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary">Get Started</a>
     </div>
     <!-- Pro -->
     <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
         <div class="pricing-badge">Most Popular</div>
         <h3>Pro</h3>
-        
+        <div class="price">$79<span>/mo</span></div>
+        <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Unlimited transactions</li>
+            <li><i class="fas fa-check"></i> Advanced inventory</li>
+            <li><i class="fas fa-check"></i> Advanced analytics</li>
+            <li><i class="fas fa-check"></i> Priority support</li>
+            <li><i class="fas fa-check"></i> Up to 5 locations</li>
+            <li><i class="fas fa-check"></i> API access</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get Started</a>
     </div>
     <!-- Enterprise -->
     <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
         <h3>Enterprise</h3>
         <div class="price">$199<span>/mo</span></div>
-        
+        <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Everything in Pro</li>
+            <li><i class="fas fa-check"></i> Unlimited locations</li>
+            <li><i class="fas fa-check"></i> Custom integrations</li>
+            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+            <li><i class="fas fa-check"></i> 24/7 phone support</li>
+            <li><i class="fas fa-check"></i> Custom training</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary">Contact Sales</a>
     </div>
 </div>
 </section>
