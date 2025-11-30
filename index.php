@@ -137,10 +137,20 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 </div>
 </section>
 
-
+<!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+AOS.init({ duration:1200, once:true });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+});
+
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 mobileMenuBtn.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
