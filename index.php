@@ -92,6 +92,38 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
     </div>
 </div>
 </section>
+
+<!-- Features Section -->
+<section id="features" class="features">
+<div class="section-title" data-aos="fade-up">
+    <h2>Powerful Features for Your Business</h2>
+    <p>Everything you need to manage your business efficiently in one place</p>
+</div>
+<div class="features-grid">
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon"><i class="fas fa-boxes"></i></div>
+        <h3>Inventory Management</h3>
+        <p>Track stock levels in real-time, set automatic reorder points, and never run out of your best-selling products.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Sales Analytics</h3>
+        <p>Get detailed insights into your sales performance with beautiful dashboards and comprehensive reports.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon"><i class="fas fa-plug"></i></div>
+        <h3>Easy Integration</h3>
+        <p>Connect seamlessly with your existing tools including accounting software, e-commerce platforms, and more.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Ready</h3>
+        <p>Accept payments anywhere with our mobile app. Perfect for pop-up shops, events, and delivery services.</p>
+    </div>
+</div>
+</section>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
