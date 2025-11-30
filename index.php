@@ -74,23 +74,16 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 .feature-card h3 { font-size:1.5rem; margin-bottom:1rem; color:var(--dark); }
 .feature-card p { color:var(--gray); line-height:1.7; }
 
-/* Pricing */
-.pricing { padding:80px 2rem; background:var(--light-gray); }
-.pricing-grid { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; margin-top:3rem; }
-.pricing-card { background:var(--white); border-radius:15px; padding:2.5rem; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.08); transition:all 0.3s; position:relative; opacity:0; }
-.pricing-card:hover { transform:translateY(-10px) scale(1.02); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
-.pricing-card.featured { border:3px solid var(--primary); animation:glow 2s ease-in-out infinite alternate; }
-@keyframes glow {
-    from { box-shadow:0 0 15px rgba(255,107,107,0.3); }
-    to { box-shadow:0 0 30px rgba(255,107,107,0.6); }
-}
-.pricing-badge { position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:var(--primary); color:var(--white); padding:0.5rem 1.5rem; border-radius:20px; font-size:0.875rem; font-weight:600; }
-.pricing-card h3 { font-size:1.75rem; margin-bottom:1rem; color:var(--dark); }
-.price { font-size:3rem; font-weight:800; color:var(--primary); margin:1rem 0; }
-.price span { font-size:1.25rem; color:var(--gray); }
-.pricing-features { list-style:none; margin:2rem 0; text-align:left; }
-.pricing-features li { padding:0.75rem 0; border-bottom:1px solid var(--light-gray); display:flex; align-items:center; gap:0.5rem; }
-.pricing-features i { color:var(--secondary); }
+/* Contact */
+.contact { padding:80px 2rem; background:var(--white); }
+.contact-container { max-width:600px; margin:0 auto; }
+.form-group { margin-bottom:1.5rem; }
+.form-group label { display:block; margin-bottom:0.5rem; font-weight:600; color:var(--dark); }
+.form-group input, .form-group textarea { width:100%; padding:1rem; border:2px solid var(--light-gray); border-radius:8px; font-size:1rem; font-family:inherit; transition:all 0.3s; }
+.form-group input:focus, .form-group textarea:focus { outline:none; border-color:var(--primary); box-shadow:0 0 10px rgba(255,107,107,0.3); }
+.form-group textarea { resize:vertical; min-height:150px; }
+.error-messages { color:red; margin-bottom:1rem; }
+
 </style>
 </head>
 <body>
@@ -152,57 +145,38 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
     </div>
 </div>
 </section>
-<!-- Pricing Section -->
-<section id="pricing" class="pricing">
-<div class="section-title" data-aos="fade-up">
-    <h2>Simple, Transparent Pricing</h2>
-    <p>Choose the plan that's right for your business</p>
-</div>
-<div class="pricing-grid">
-   
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-        <h3>Basic</h3>
-        <div class="price">$90<span>/mo</span></div>
-        <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> Up to 1,000 transactions</li>
-            <li><i class="fas fa-check"></i> Basic inventory management</li>
-            <li><i class="fas fa-check"></i> Sales reports</li>
-            <li><i class="fas fa-check"></i> Email support</li>
-            <li><i class="fas fa-check"></i> 1 location</li>
-        </ul>
-        <a href="#contact" class="btn btn-secondary">Get Started</a>
-    </div>
-    <!-- Pro -->
-    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
-        <div class="pricing-badge">Most Popular</div>
-        <h3>Pro</h3>
-        <div class="price">$79<span>/mo</span></div>
-        <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> Unlimited transactions</li>
-            <li><i class="fas fa-check"></i> Advanced inventory</li>
-            <li><i class="fas fa-check"></i> Advanced analytics</li>
-            <li><i class="fas fa-check"></i> Priority support</li>
-            <li><i class="fas fa-check"></i> Up to 5 locations</li>
-            <li><i class="fas fa-check"></i> API access</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary">Get Started</a>
-    </div>
-    <!-- Enterprise -->
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-        <h3>Enterprise</h3>
-        <div class="price">$199<span>/mo</span></div>
-        <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> Everything in Pro</li>
-            <li><i class="fas fa-check"></i> Unlimited locations</li>
-            <li><i class="fas fa-check"></i> Custom integrations</li>
-            <li><i class="fas fa-check"></i> Dedicated account manager</li>
-            <li><i class="fas fa-check"></i> 24/7 phone support</li>
-            <li><i class="fas fa-check"></i> Custom training</li>
-        </ul>
-        <a href="#contact" class="btn btn-secondary">Contact Sales</a>
-    </div>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+<div class="contact-container" data-aos="fade-up">
+    <h2>Get In Touch</h2>
+    <?php if(!empty($errors)): ?>
+        <div class="error-messages">
+            <ul>
+                <?php foreach($errors as $error): ?>
+                    <li><?php echo $error; ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    <?php endif; ?>
+    <form method="POST" action="process-contact.php">
+        <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" value="<?php echo $old['name'] ?? ''; ?>" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" value="<?php echo $old['email'] ?? ''; ?>" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required><?php echo $old['message'] ?? ''; ?></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+    </form>
 </div>
 </section>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
