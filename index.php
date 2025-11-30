@@ -68,6 +68,13 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
     <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
 </div>
 </nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+});
 </script>
 </body>
 </html>
