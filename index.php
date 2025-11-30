@@ -137,6 +137,37 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 </div>
 </section>
 
+<!-- Contact Section -->
+<section id="contact" class="contact">
+<div class="contact-container" data-aos="fade-up">
+    <h2>Get In Touch</h2>
+    <?php if(!empty($errors)): ?>
+        <div class="error-messages">
+            <ul>
+                <?php foreach($errors as $error): ?>
+                    <li><?php echo $error; ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    <?php endif; ?>
+    <form method="POST" action="process-contact.php">
+        <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" value="<?php echo $old['name'] ?? ''; ?>" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" value="<?php echo $old['email'] ?? ''; ?>" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required><?php echo $old['message'] ?? ''; ?></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+    </form>
+</div>
+</section>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
