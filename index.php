@@ -146,41 +146,20 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-<div class="contact-container" data-aos="fade-up">
-    <h2>Get In Touch</h2>
-    <?php if(!empty($errors)): ?>
-        <div class="error-messages">
-            <ul>
-                <?php foreach($errors as $error): ?>
-                    <li><?php echo $error; ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    <?php endif; ?>
-    <form method="POST" action="process-contact.php">
-        <div class="form-group">
-            <label for="name">Name *</label>
-            <input type="text" id="name" name="name" value="<?php echo $old['name'] ?? ''; ?>" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" value="<?php echo $old['email'] ?? ''; ?>" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" required><?php echo $old['message'] ?? ''; ?></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
-    </form>
-</div>
-</section>
-
-
+<!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+AOS.init({ duration:1200, once:true });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+});
+
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 mobileMenuBtn.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
