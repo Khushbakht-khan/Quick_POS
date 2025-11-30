@@ -74,6 +74,7 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
 .feature-card h3 { font-size:1.5rem; margin-bottom:1rem; color:var(--dark); }
 .feature-card p { color:var(--gray); line-height:1.7; }
 
+
 </style>
 </head>
 <body>
@@ -116,7 +117,7 @@ nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); back
     <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
         <div class="feature-icon"><i class="fas fa-boxes"></i></div>
         <h3>Inventory Management</h3>
-        <p>Track stock levels in real-time, set automatic reorder points, and never run out of your best-selling products.</p>
+        <p>Track stock levels in real-time, set automatic reorder points, and never run out of your best-selling products here.</p>
     </div>
     <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
         <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
